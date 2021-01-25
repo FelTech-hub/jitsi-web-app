@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #ccc;
+    
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+* navbar regular css start */
+.navbar-area {
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid #000;
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #af7d2b;
+  text-decoration: none;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255,255,255,.1);
+}
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span, 
+.nav-toggler span:before, 
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+
+
+
+/* Showcase Section */
+
+#showcase {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url(../image/popup2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding: 10rem 0;
+}
+
+#showcase .heading-text {
+    padding: 0.5rem 2rem;
+    font-size: 3rem;
+    color:  #af7d2b;
+}
+#showcase .leading {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+   
+ color: #f1f1f1;
+}
+
+#showcase .btn-primary {
+    padding: 1rem 3rem;
+    margin-left: 2rem;
+    background-color: #db933b;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+#showcase .btn-primary:hover, .btn-primary:checked {
+    background-color: #af7d2b;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.service {
+    padding: 6rem;
+    background-color: #ccc;
+}
+
+.service h2 {
+    padding: 1rem 0;
+    color: #db933b;
+}
+
+#meet {
+    width: 100%;
+    height: 1000px;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* mobile breakpoint start */
+@media screen and (max-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0,0,0,.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px;
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(255,255,255,.1);
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+   
+    
+    #showcase .heading-text {
+        padding: 1rem 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #ccc;
+    }
+    #showcase .leading {
+        padding: 1rem 0;
+        font-size: 1rem;
+       
+    }
+    
+    #showcase .btn-primary {
+        padding: 1rem 3rem;
+        margin: 0;
+    }
+
+    .service h2 {
+        padding: 1rem 0;
+        color: #db933b;
+        font-size: 1rem;
+    }
+
+    #meet {
+        width: 100%;
+        height: 1000px;
+        
+    }
+    /* navbar css for mobile end */
+  }
+  /* mobile breakpoint end */
+
+

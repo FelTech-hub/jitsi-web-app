@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to our site</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+ <!-- site-navbar start -->
+ <div class="navbar-area">
+    <div class="container">
+      <nav class="site-navbar">
+        <!-- site logo -->
+        <a href="#home" class="site-logo">MeetLab</a>
+
+        <!-- site menu/nav -->
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">service</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+
+        <!-- nav-toggler for mobile version only -->
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div><!-- navbar-area end -->
+
+    <section id="showcase">
+        <div class="container">
+           <h1 class="heading-text">Welcome to MeetLab</h1>
+           <p class="leading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem inventore delectus quisquam ea consectetur adipisci dignissimos maiores sed ipsum totam?</p>
+           <button class="btn-primary">Read More</button>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="container">
+            <h2>Jitsi Meet is a free and Open Source Web App.</h2>
+          <div id="meet">
+            
+          </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2021 MeetLab</p>
+    </footer>
+
+
+
+    <!-- Js -->
+    <script src="./script.js"></script>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+    const domain = 'meet.jit.si';
+    const options = {
+    roomName: 'meet.jit.si/Conference/Mr Adeshina',
+    parentNode: document.querySelector('#meet')
+};
+    const api = new JitsiMeetExternalAPI(domain, options);
+    
+
+    </script>
+</body>
+</html>
